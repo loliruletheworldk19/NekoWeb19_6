@@ -1,0 +1,1153 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: aqua;
+    transition: 1s;
+}
+.fullScreen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.containerHeader {
+    z-index: 5;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background-color: var(--main-color-1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--black-to-white);
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px var(--black-to-white); 
+    border-radius: 10px;
+    background-color: var(--main-color-2);
+}
+   
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--main-color-1); 
+    background-image: linear-gradient(-45deg, var(--main-color-1), var(--main-color-2));
+    border-radius: 50px;
+    box-shadow: inset 0 0 5px var(--white-color);
+}
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;
+    background: var(--main-color-1-hover); 
+}
+/* /////////////////////////////////////////// */
+/* /////////////////////////////////////////// */
+/* /////////////////////////////////////////// */
+/* /////////////////////////////////////////// */
+
+.containerBody {
+    width: 100%;
+    height: 100%;
+    background-color: var(--white-color);
+    /* background-color: var(--black-to-white); */
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.ChatAddFooter {
+    z-index: 5;
+    width: 99.2%;
+    height: 60px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin-left: -10px;
+    border-top: 4px solid var(--white-color);
+}
+/* searchBox *//* searchBox *//* searchBox *//* searchBox *//* searchBox */
+.Searchbox{
+    width: 66.66%;
+    height: 100%;
+    /* flex: 4; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Searchbox > form {
+    position: relative;
+    width: 500px;
+    background: var(--color-brand);
+    border-radius: var(--rad);
+}
+.boxSearch > input, button {
+    height: var(--height);
+    border: 0;
+    color: var(--font-color);
+}
+.boxSearch > button {
+    color: var(--black-to-white);
+}
+.boxSearch > input[type="search"] {
+    outline: 0;
+    width: 100%;
+    background: var(--white-color);
+    padding: 0 1.6rem;
+    border-radius: var(--rad);
+    appearance: none;
+    transition: all var(--dur) var(--bez);
+    /* transition-property: width, border-radius; */
+    z-index: 1;
+    position: relative;
+}
+.boxSearch > button {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: var(--btn-width);
+    font-weight: bold;
+    /* background: var(--color-brand); */
+    background-image: linear-gradient(to right, var(--main-color-1) , var(--color-brand));
+    border-radius: 0 var(--rad) var(--rad) 0;
+}
+.boxSearch > button:hover {
+    cursor: pointer;
+}
+.boxSearch > input:not(:placeholder-shown) {
+    border-radius: var(--rad) 0 0 var(--rad);
+    width: calc(100% - var(--btn-width));
+}
+label {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+/* ///////////////////////////////////////////// */
+.btn {
+    width: 132.8px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+.btn > input {
+    width: 80px;
+    height: 40px;
+    background-color: var(--white-color);
+    border-radius: 10px;
+}
+.btn > input:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+/* searchBox *//* searchBox *//* searchBox *//* searchBox *//* searchBox */
+/* changeMode *//* changeMode *//* changeMode *//* changeMode *//* changeMode */
+.EventChangeMode {
+    position: relative;
+    width: 130px;
+    height: 44px;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0px;
+    margin-top: 2px;
+}
+.boxchangeMode {
+    width: 100%;
+    height: 100%;
+}
+.changeMode{
+    width: 100%;
+    height: 100%;
+    background-color: #e3bdff;
+    /* flex: 1; */
+    display: flex;
+    align-items: center;
+    background-color: var(--white-color);
+    border-radius: var(--rad);
+    color: var(--main-color-1);
+    font-weight: 600;
+    border: 2px solid var(--main-color-1);
+}
+.textMode {
+    width: 65%;
+    height: 100%;
+    display: flex;
+    text-align: line;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    /* background-color: aqua; */
+    /* background-color: #b34a4a; */
+}
+.textMode > .mode{
+    width: 100%;
+    height: 100%;
+    margin-top: 4px;
+    color: var(--main-color-1);
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: aqua; */
+}
+
+
+.switchMode {
+    position: relative;
+    display: inline-block;
+    width: 42px;
+    height: 22px;
+}
+  
+.switchMode input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--main-color-2);
+    -webkit-transition: .49s;
+    transition: .49s;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 1px;
+    background-color: var(--white-color);
+    -webkit-transition: .49s;
+    transition: .49s;
+}
+  
+input:checked + .slider {
+    background-color: var(--main-color-1);
+}
+  
+input:focus + .slider {
+    box-shadow: 0px 0px 1px var(--main-color-1);
+}
+  
+input:checked + .slider:before {
+    background-color: var(--black-color);
+    -webkit-transform: translateX(18px);
+    -ms-transform: translateX(18px);
+    transform: translateX(18px);
+}
+  
+  /* Rounded sliders */
+.slider.round {
+    border-radius: 25px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
+.changeMode {
+    /* visibility: hidden; */
+    /* visibility: hidden; */
+    display: none;
+    opacity: 0.92;
+}
+
+#cck {
+    position: absolute;
+    left: 40%;
+    width: 28px;
+    height: 28px;
+    background-color: var(--white-color);
+    border-radius: 50%;
+    user-select: none;
+    border: none;
+    box-shadow: 0 0 5px 5px var(--main-color-1);
+}
+#cch {
+    position: absolute;
+    left: 40%;
+    width: 28px;
+    height: 28px;
+    background-color: var(--black-color);
+    border-radius: 50%;
+    user-select: none;
+    border: none;
+    display: flex;
+    align-self: center;
+    box-shadow: 0 0 5px 5px var(--main-color-1),
+                inset 0 0 1px 1px var(--main-color-1);
+}
+#cck:hover, #cch:hover {
+    cursor: pointer;
+}
+.aae {
+    left: 33%;
+    position: absolute;
+    opacity: 1;
+    width: 62%;
+    height: 62%;
+    border-radius: 50%;
+    background-color: var(--main-color-1);
+    box-shadow: 0 0 1px 1px var(--main-color-1);
+}
+#lockEvent {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+/* changeMode *//* changeMode *//* changeMode *//* changeMode */
+
+.containerBodyCenter {
+    width: 100%;
+    max-width: 1600px;
+    height: 100%;
+    /* background-color: var(--white-colorx); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}   
+.chatCenter {
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.chatCenter > .displayChat {
+    width: 100%;
+    max-width: 1200px;
+    height: calc(100%-60px);
+    min-height: 92%;
+    /* min-height: 800px; */
+    display: flex;
+    flex-direction: column;
+    padding: 80px 5px 10px 5px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-image: linear-gradient(to bottom, var(--white-color), var(--main-color-2));
+    /* background-image: url(../img/background/1.jpg);
+    background-position: center;
+    background-size: cover; */
+}
+.displayChat > div {
+    width: fit-content;
+    height: calc(fit-content + 5px);
+    padding: 0.5% 2% 0.5% 2%;
+    border-top: 0.1px solid var(--main-color-1);
+    border-left: 2px solid var(--main-color-1);
+    border-bottom: 2px solid var(--main-color-1);
+    border-radius: 50px;
+    font-weight: 500;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to left, var(--test-color), var(--main-color-2));
+    color: red;
+    color: var(--font-color);
+}
+.displayChat > div > span {
+    margin-top: 5px;
+    font-weight: 400;
+}
+.displayChat > div:hover + span {
+    visibility: visible;
+}
+.displayChat > span {
+    font-size: 12px;
+    align-self: center;
+    visibility: hidden;
+}
+.displayChat > div > span > img{
+    width: 250px;
+    height: auto;
+}
+.imageCenter {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1% 0 1% 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* background-color: aqua; */
+    /* background-color: var(--white-colorx); */
+    /* background-image: url(../img/background/2.jpg); */
+}
+.fistTop {
+    width: 100%;
+    height: 347px;
+    background-color: var(--main-color-1);
+    background-image: url(../img/background/1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.8;
+    border-bottom: 2px solid var(--main-color-1);
+}
+.imageCenter > .test {
+    width: 250px;
+    height: 250px;
+    /* background-color: aqua; */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 10px 5px 15px 5px;
+}
+.imageCenter > .test > .title {
+    width: 100%;
+    height: 60px;
+    border-radius: 10px;
+    background-color: var(--black-to-whitex);
+    /* background-color: var(--black-to-whitex); */
+}
+.imageCenter > .test > .title:hover {
+    width: 100%;
+    height: 60px;
+    border-radius: 10px;
+    /* background-color: var(--white-colorx); */
+    opacity: 0.8;
+}
+.imageCenter > .test > .title > .designName {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    font-size: 16px;
+    font-weight: 600;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 12%;
+}
+.imageCenter > .test > .title > .author {
+    width: 60%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 12%;
+    /* background-color: aqua; */
+}
+.imageCenter > .test > .title > .author:hover {
+    cursor: pointer;
+}
+.imageCenter > .test > .title > .author > img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: no-repeat
+}
+.imageCenter > .test > .title > .author > span {
+    margin-left: 2%;
+}
+.imageCenter > .test > img {
+    width: calc(100% - 60px);
+    height: calc(100% - 60px);
+    object-fit: cover; 
+    transition: .5s;
+    border-radius: 10px;
+    background-size: cover;
+    background: var(--main-color-2);
+}
+.imageCenter > .test > img:hover {
+    transform: scale(1.25);
+    cursor: pointer;
+    border: 1px solid var(--main-color-2);
+    box-shadow: -2px 2px 1px var(--main-color-2),
+               -3px 3px 1px var(--main-color-2),
+              -3px 3px 1px var(--main-color-2),
+             -3px 3px 1px var(--main-color-2);
+}
+.containerBodyRight, .containerBodyLeft {
+    width: 30%;
+    max-width: 500px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+.select {
+    width: 100%;
+    max-width: 350px;
+    height: 100%;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* background-color: aqua; */
+}
+/* .containerBodyLeft > .select {
+
+}
+.containerBodyRight > .select {
+    
+} */
+.select > .top {
+    width: 100%;
+    height: 300px;
+    background-color: var(--white-color);
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid var(--main-color-1);
+    border-right: 8px solid var(--main-color-2);
+    border-bottom-right-radius: 5px;
+}
+.select > .bottom {
+    width: 100%;
+    height: calc(100% - 300px);
+}
+.select > .bottom > .listImage-Room, .listFriend{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    padding: 4px 2px 10px 4px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.select > .bottom > .listChat-Room, .listMember{
+    width: 100%;
+    height: 90%;
+    max-height: 700px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 4px 2px 50px 4px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* display: none; */
+}
+.listChat-Room > div {
+    width: 94%;
+    height: 40px;
+    min-height: 50px;
+    background-color: var(--white-color);
+    border-bottom: 2px solid var(--main-color-1);
+    box-shadow: 1px 3px 5px 1px var(--main-color-1-hover);
+    border-radius: 10px;
+    margin-top: 3%;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    padding-left: 10px;
+}
+.listChat-Room > div:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+}
+.SettingChatRoom {
+    width: 100%;
+    height: 50px;
+    background-color: var(--main-color-2);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 2px solid var(--main-color-1);
+}
+.SettingChatRoom > button {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-color-1);
+}
+.SettingChatRoom > button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+button > .fa-solid {
+    color: var(--white-color);
+}
+button > .fa-user-group, .fa-circle-plus, .fa-right-to-bracket {
+    font-size: 25px;
+}
+button > .fa-circle-plus {
+    font-size: 40px;
+}
+button > .fa-plus {
+    top: 10%;
+    right: 0;
+    position: absolute;
+    font-size: 20px;
+}
+/* ////////////////////////////// */
+/* ////////////////////////////// */
+/* ////////////////////////////// */
+/* ////////////////////////////// */
+/* ////////////////////////////// */
+/* //////////user-DATA/////////// */
+
+.containerBodyRight > .select > .top > .infoUserTop {
+    width: 100%;
+    height: 55%;
+    /* background-image: url(../img/background/4.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; */
+    display: flex;
+}
+.infoUserTop > .infoUserTop-Left {
+    width: 33%;
+    height: 100%;
+}
+.infoUserTop-Left > .userAvataHome {
+    width: 100%;
+    height: 70%;
+    display: flex;
+}
+#userAvata {
+    width: 90%;
+    min-width: 80px;
+    height: 80%;
+    min-height: 80px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    margin: auto;
+    border: 0.1px solid var(--black-to-white);
+    border-radius: 50%;
+}
+.infoUserTop-Left > .userNameHome {
+    width: 100%;
+    height: 30%;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.infoUserTop > .infoUserTop-Right {
+    width: 67%;
+    height: 100%;
+}
+.infoUserTop-Right > .userEmailHome {
+    width: 100%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.userEmailHome > #UserEmail {
+    width: 100%;
+    height: 40%;
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+.userEmailHome > #userDescribe {
+    width: 100%;
+    height: 60%;
+    font-size: 14px;
+    padding: 2% 2px 2% 2px;
+}
+.infoUserTop-Right > .userEditProfile {
+    width: 100%;
+    height: 35%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+.userEditProfile > input {
+    width: 70%;
+    height: 30px;
+    border: 1px solid var(--font-color);
+    background-color: var(--white-color);
+    border-radius: 5px;
+}
+.userEditProfile > input:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+.userEditProfile > .settingBTN {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.settingBTN > .fa-gear {
+    font-size: 25px;
+}
+.settingBTN > .fa-gear:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+.containerBodyRight > .select > .top > .infoUserMid {
+    width: 100%;
+    height: 22.5%;
+    display: flex;
+}
+.infoUserMid > .boxData {
+    width: calc(100%/3);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.containerBodyRight > .select > .top > .infoUserBot {
+    width: 100%;
+    height: 22.5%;
+    display: flex;
+}
+.infoUserBot > .moreSelect {
+    width: calc(100% - 150px);
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin-left: 4px;
+}
+.moreSelect > button {
+    width: 48px;
+    height: 48px;
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+.moreSelect > button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transform: translateY(-10px);
+}
+.moreSelect > button > .material-symbols-outlined {
+    font-size: 42px;
+    color: var(--main-color-1);
+}
+/* ////////////////////////////// */
+/* ////////////////////////////// */
+/* ////////////////////////////// */
+/* ////////////////////////////// */
+/* ////////////////////////////// */
+#showIMGtest, #showCHATtest, #statistical, #showINFOtest {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffffff00;
+    color: var(--black-color);
+}
+.toggle > ul li a button {
+    opacity: 0.5;
+}
+.toggle > ul li a button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+/* overviewCHAT
+overviewIMG */
+/* ////////////////////////////// */
+/* ////////////////////////////// */
+/* ////////////////////////////// */
+/* ////////////////////////////// */
+.ChatAddFooter > .chatContainerInput {
+    width: 100%;
+    height: 100%;
+    min-height: 60px;
+    background-color: var(--main-color-2);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.chatContainerInput > #chatInputText {
+    width: 83%;
+    height: 80%;
+    margin-left: 1%;
+    padding: 0 1.6rem;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--white-color);
+}
+.chatContainerInput > #chatInputText:focus {
+    outline: 4px solid var(--main-color-1-hover);
+}
+.chatContainerInput > .chatSelect {
+    width: 15%;
+    height: 80%;
+    margin-left: 0.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid var(--main-color-1-hover);
+    border-radius: 10px;
+}
+.chatSelect >.btnChat {
+    width: 20%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.chatSelect >.btnChat > .fa-solid {
+    font-size: 25px;
+    color: var(--main-color-1-hover);
+}
+.chatSelect > .btnChat:hover {
+    cursor: pointer;
+    transform: translateY(5px);
+    opacity: 0.6;
+}
+/* //////////////////// *//* //////////////////// *//* //////////////////// */
+/* //////////////////// *//* //////////////////// *//* //////////////////// */
+/* //////////////////// *//* //////////////////// *//* //////////////////// */
+.topSelectK {
+    position: relative;
+    width: 100%;
+    height: 70%;
+}
+nav {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-65%, -40%);
+}
+nav .toggle {
+    height: 100%;
+    width: 100%;
+}
+nav input[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+    cursor: pointer;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+/* test-START */
+nav .toggle:hover > input {
+    opacity: 0;
+    position: absolute;
+    cursor: pointer;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+nav .toggle:hover > ul li:nth-child(1) {
+    transform: rotate(200deg) translate(120px) rotate(-200deg);
+}
+nav .toggle:hover > ul li:nth-child(2) {
+    transform: rotate(235deg) translate(110px) rotate(-235deg);
+}
+nav .toggle:hover > ul li:nth-child(3) {
+    transform: rotate(270deg) translate(90px) rotate(-270deg);
+}
+nav .toggle:hover > ul li:nth-child(4) {
+    transform: rotate(315deg) translate(70px) rotate(-315deg);
+}
+/* test-END */
+nav input[type="checkbox"]:checked ~ ul li:nth-child(1) {
+    transform: rotate(200deg) translate(120px) rotate(-200deg);
+}
+nav input[type="checkbox"]:checked ~ ul li:nth-child(2) {
+    transform: rotate(235deg) translate(110px) rotate(-235deg);
+}
+nav input[type="checkbox"]:checked ~ ul li:nth-child(3) {
+    transform: rotate(270deg) translate(90px) rotate(-270deg);
+}
+nav input[type="checkbox"]:checked ~ ul li:nth-child(4) {
+    transform: rotate(315deg) translate(70px) rotate(-315deg);
+}
+nav input[type="checkbox"]:hover ~ .btn {
+    background-color: var(--main-color-1-hover);
+}
+nav .btn {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: var(--main-color-1);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 1.25s cubic-bezier(0.8, 0, 0.2, 1), background-color 0.25s;
+    z-index: 9;
+    box-shadow: 0px 0px 10px -1px var(--main-color-1), 
+    inset 0 -3px 4px -1px var(--main-color-1-hover);
+}
+nav .btn:after, nav .btn:before {
+    content: '';
+    position: absolute;
+    background-color: var(--main-color-1);
+    border-radius: 4px;
+    transition: transform 1.25s cubic-bezier(0.8, 0, 0.2, 1);
+}
+nav .btn:after {
+    width: 40px;
+    height: 8px;
+    top: 56px;
+    left: 40px;
+}
+nav .btn:before {
+    width: 8px;
+    height: 40px;
+    top: 40px;
+    left: 56px;
+}
+nav ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    list-style-type: none;
+}
+nav li {
+    transition: transform 1.1s cubic-bezier(0.7, 0, 0.3, 0.9);
+}
+nav li a {
+    position: absolute;
+    width: 50px;
+    height: 55px;
+    line-height: 42px;
+    background-color: var(--main-color-1);
+    border-radius: 50%;
+    top: 20%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    transition: background-color 0.5s;
+}
+nav li a button {
+    display: flex;
+}
+nav li a button .fa-solid {
+    font-size: 25px;
+    margin: 35% auto auto 10%;
+    color: var(--white-color);
+}
+nav li a button .fa-chart-pie {
+    font-size: 30px;
+    margin: 34% auto auto 5%;
+}
+nav li a button .fa-circle-info {
+    font-size: 32px;
+    margin: 36% auto auto 11%;
+}
+nav li a:hover {
+    background-color: var(--main-color-1-hover);
+}
+
+.bottomSelectK {
+    width: 100%;
+    height: 30%;
+    min-width: 340px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.bottomSelectK button {
+    width: 18%;
+    height: 70%;
+    margin-left: 5%;
+    background-color: #fefefe00;
+    border: 3px solid var(--main-color-1);
+    border-radius: 50%;
+}
+.bottomSelectK button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+.bottomSelectK button:first-child {
+    margin-left: -5%;
+}
+.bottomSelectK button .fa-solid {
+    color: var(--main-color-1);
+    font-size: 35px;
+}
+
+/* /////////////////////////boxEventClick//// */
+
+.screenEventClick {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: var(--purdah);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.boxEventClick {
+    width: 20%;
+    min-width: 480px;
+    height: 30%;
+    min-height: 350px;
+    background-color: var(--white-color);
+    border: 2px solid var(--main-color-1);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.boxEventClick > .boxEventTop {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.boxEventTop > button {
+    width: 8%;
+    height: 55%;
+    border-radius: 50%;
+    margin-right: 2%;
+    color: var(--white-color);
+    background-color: var(--main-color-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.boxEventTop > button >.fa-solid{
+    color: var(--white-color);
+    font-size: 20px;
+}
+.boxEventTop > button:hover {
+    cursor: pointer;
+    background-color: var(--main-color-1-hover);
+    transform: scale(1.05);
+}
+.boxEventClick > .boxEventMid {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.boxEventMid > span {
+    color: var(--main-color-1);
+    font-size: 200%;
+    font-weight: 400;
+}
+.boxEventMid > span >.fa-solid {
+    color: var(--main-color-1);
+    font-size: 25px;
+    font-weight: 400;
+}
+.boxEventMid > #roomName, #comeRoomName {
+    width: 82%;
+    height: 40%;
+    margin:  10px 0 0 5px;
+    border-radius: 15px;
+    padding-left: 6px;
+    font-weight: 500;
+    color: var(--main-color-1-hover);
+    color: var(--font-color);
+    background-color: var(--main-color-2);
+    border: 1px solid var(--main-color-1);
+    border: none;
+}
+.boxEventMid > input:focus {
+    outline: 3px solid  var(--main-color-1-hover);
+}
+.boxEventMid > #createROOM, #joinROOM {
+    width: 24%;
+    height: 40%;
+    margin:  10px 0 0 0;
+    border-radius: 15px;
+    padding-left: 5px;
+    border: 1px solid var(--main-color-1);
+    border: none;
+    font-weight: 500;
+    color: var(--white-color);
+    background-color: var(--main-color-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#joinROOM > i {
+    margin-left: 4px;
+}
+#createROOM > i {
+    margin-left: 4px;
+}
+#createROOM:hover, #joinROOM:hover {
+    cursor: pointer;
+    background-color: var(--main-color-1-hover);
+    transform: scale(1.05);
+}
+.boxEventBot {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    display: flex;
+}
+.boxEventBot > .data > span {
+    color: var(--main-color-1-hover);
+    margin: 5px 0 0 0;
+}
+.boxEventBot > .data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+#coppyInviteID {
+    margin: 0 0 0 10px;
+}
+#coppyInviteID:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+#coppyInviteID > .fa-solid{
+    color: var(--main-color-1);
+    font-size: 25px;
+}
+
+
+/* 
+.red {
+    background-color: orangered;
+} */

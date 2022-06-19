@@ -1,0 +1,410 @@
+
+
+
+
+/* ////////////////////////////////////////////////////// */
+
+
+.searchContainer {
+    position: relative;
+    width: 800px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--white-color);
+}
+
+.searchContainer > .title {
+    /* width: auto; */
+    width: 16.6%;
+    height: 100%;
+    /* flex: 1; */
+    color: var(--font-color);
+    font-size: 50px;
+    font-family: 'Lucida Handwriting';
+    display: grid;
+    align-content: center;
+    justify-content: flex-end;
+    text-shadow: 1px 1px 1px var(--main-color-1),
+                    2px 2px 1px var(--black-color),
+                        3px 3px 1px var(--main-color-2);
+    user-select: none;
+}
+.searchContainer > .title:hover {
+    cursor: pointer;
+}
+
+.Searchbox{
+    width: 66.66%;
+    height: 100%;
+    /* flex: 4; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Searchbox > form {
+    position: relative;
+    width: 500px;
+    background: var(--color-brand);
+    border-radius: var(--rad);
+}
+.boxSearch > input, button {
+    height: var(--height);
+    border: 0;
+    color: var(--font-color);
+}
+.boxSearch > button {
+    color: var(--black-to-white);
+}
+.boxSearch > input[type="search"] {
+    outline: 0;
+    width: 100%;
+    background: var(--white-color);
+    padding: 0 1.6rem;
+    border-radius: var(--rad);
+    appearance: none;
+    transition: all var(--dur) var(--bez);
+    /* transition-property: width, border-radius; */
+    z-index: 1;
+    position: relative;
+}
+.boxSearch > button {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: var(--btn-width);
+    font-weight: bold;
+    /* background: var(--color-brand); */
+    background-image: linear-gradient(to right, var(--main-color-1) , var(--color-brand));
+    border-radius: 0 var(--rad) var(--rad) 0;
+}
+.boxSearch > button:hover {
+    cursor: pointer;
+}
+.boxSearch > input:not(:placeholder-shown) {
+    border-radius: var(--rad) 0 0 var(--rad);
+    width: calc(100% - var(--btn-width));
+}
+label {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+.boxchangeMode{
+    width: 16.6%;
+    height: 80%;
+}
+
+.changeMode{
+    width: 100%;
+    height: 100%;
+    background-color: #e3bdff;
+    /* flex: 1; */
+    display: flex;
+    align-items: center;
+    background-color: var(--white-color);
+    border-radius: var(--rad);
+    color: var(--main-color-1);
+    font-weight: 600;
+}
+.textMode {
+    width: 65%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #b34a4a; */
+}
+.textMode > .mode{
+    color: var(--main-color-1);
+}
+
+
+.switchMode {
+    position: relative;
+    display: inline-block;
+    width: 42px;
+    height: 22px;
+}
+  
+.switchMode input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--main-color-2);
+    -webkit-transition: .49s;
+    transition: .49s;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 1px;
+    background-color: var(--white-color);
+    -webkit-transition: .49s;
+    transition: .49s;
+}
+  
+input:checked + .slider {
+    background-color: var(--main-color-1);
+}
+  
+input:focus + .slider {
+    box-shadow: 0px 0px 1px var(--main-color-1);
+}
+  
+input:checked + .slider:before {
+    background-color: var(--black-color);
+    -webkit-transform: translateX(18px);
+    -ms-transform: translateX(18px);
+    transform: translateX(18px);
+}
+  
+  /* Rounded sliders */
+.slider.round {
+    border-radius: 25px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
+.changeMode {
+    /* visibility: hidden; */
+    /* visibility: hidden; */
+    display: none;
+    opacity: 0.92;
+}
+
+#cck {
+    position: absolute;
+    right: 12%;
+    width: 28px;
+    height: 28px;
+    background-color: var(--white-color);
+    border-radius: 50%;
+    user-select: none;
+    border: none;
+    box-shadow: 0 0 10px 3px #bababa;
+}
+#cch {
+    position: absolute;
+    right: 12%;
+    width: 28px;
+    height: 28px;
+    background-color: var(--black-color);
+    border-radius: 50%;
+    user-select: none;
+    border: none;
+    display: flex;
+    align-self: center;
+    box-shadow: 0 0 10px 3px #373737;
+}
+.aae {
+    right: 12%;
+    position: absolute;
+    opacity: 1;
+    width: 66%;
+    height: 66%;
+    border-radius: 50%;
+    background-color: var(--main-color-1); 
+    box-shadow: inset 0 0 5px 1px var(--color-brand);
+}
+
+/* ////////////////////////////////////////////// */
+/* ////////////////////////////////////////////// */
+/* ////////////////////////////////////////////// */
+/* ////////////////////////////////////////////// */
+/* ////////////////////////////////////////////// */
+/* ////////////////////////////////////////////// */
+/* ////////////////////////////////////////////// */
+/* ////////////////////////////////////////////// */
+/* ////////////////////////////////////////////// */
+/* ////////////////////////////////////////////// */
+
+.center {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.authentication {
+    opacity: 0.95;
+    width: 360px;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white-color);
+}
+.authentication > .title {
+    width: 100%;
+    height: 30%;
+    color: var(--black-color);
+}
+.authentication > .title > .textTop {
+    width: 100%;
+    height: 80%;
+    font-size: 80px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-family: 'Lucida Handwriting';
+    text-shadow: 1px 1px 1px var(--main-color-1),
+                    2px 2px 1px var(--black-color),
+                        3px 3px 1px var(--main-color-2);
+    user-select: none;
+}
+.authentication > .title > .textbottom {
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lucida Handwriting';
+}
+.loginRegisterContainer {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.loginRegisterContainer > button {
+    width: 86%;
+    height: 18%;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius:  20px;
+    margin-top: 10px;
+}
+.loginRegisterContainer > button:hover {
+    cursor: pointer;
+}
+.loginRegisterContainer > #clickToRegister {
+    background-color: var(--main-color-1);
+    color: var(--white-color);
+}.loginRegisterContainer > #clickToRegister:hover {
+    background-color: var(--main-color-1-hover);
+}
+.loginRegisterContainer > #clickToLogin {
+    color: var(--font-color);
+    background-color: var(--gray-color);
+}
+.loginRegisterContainer > #clickToLogin:hover {
+    background-color: var(--gray-color-hover);
+}
+
+.loginRegisterContainer > .title {
+    width: 100%;
+    height: 22%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+.loginRegisterContainer > .anotherSelect {
+    box-sizing: border-box;
+    width: 100%;
+    height: 25%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 0 26% 0 26%;
+}
+.anotherSelect > .select {
+    box-sizing: border-box;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.anotherSelect > .select:hover {
+    background-color: var(--gray-color);
+    box-shadow: inset 0px 0px 10px rgb(205, 205, 205);
+    cursor: pointer;
+}
+.select > .fa-brands {
+    font-size: 20px;
+}
+.select > .fa-apple {
+    color: var(--black-color);
+    font-size: 26px;
+    padding: 0 0 4px 0;
+}
+.select > .fa-twitter {
+    color: #38b6ff;
+    padding: 0 0 0 2px;
+}
+.select > .fa-google {
+    font-size: 18px;
+    background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+.select > .fa-facebook {
+    font-size: 22px;
+    color: #1b6af2;
+}
+
+.line {
+    width: 80%;
+    height: 0.2%;
+    background-color: var(--font-color-gray);
+    opacity: 0.5;
+}
+
+.authentication > .info {
+    width: 70%;
+    height: 20%;
+    /* display: flex;
+    flex-direction: column; */
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+    color: var(--font-color-gray);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.info > a {
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--font-color-main);
+}
+
+.test {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--black-color);
+    opacity: 0.1;
+    z-index: 0;
+    user-select: none;
+    display: none;
+}

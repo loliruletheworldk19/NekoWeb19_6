@@ -1,0 +1,165 @@
+@keyframes leftTOrightShowControlMode {
+    /* 12% to 2% */
+    0% {
+        right: 12%;
+        opacity: 1;
+    }
+    20% {
+        right: 10%;
+        opacity: 0.6;
+    }
+    40% {
+        right: 8%;
+        opacity: 0.4;
+    }
+    60% {
+        right: 6%;
+        opacity: 0.2;
+    }
+    80% {
+        right: 4%;
+        opacity: 0.1;
+    }
+    100% {
+        right: 2%;
+        opacity: 0;
+    }
+}
+@keyframes rightTOleftShowControlMode {
+    /* 12% to 2% */
+    0% {
+        right: 2%;
+        opacity: 0;
+    }
+    20% {
+        right: 4%;
+        opacity: 0.1;
+    }
+    40% {
+        right: 6%;
+        opacity: 0.2;
+    }
+    60% {
+        right: 8%;
+        opacity: 0.4;
+    }
+    80% {
+        right: 10%;
+        opacity: 0.6;
+    }
+    100% {
+        right: 12%;
+        opacity: 1;
+    }
+}
+@keyframes leftTOrightShowControlModeHOME {
+    /* 12% to 2% */
+    0% {
+        left: 40%;
+        opacity: 1;
+    }
+    10% {
+        left: 42%;
+        opacity: 0.9;
+    }
+    20% {
+        right: 45%;
+        opacity: 0.8;
+    }
+    30% {
+        left: 47%;
+        opacity: 0.7;
+    }
+    40% {
+        left: 50%;
+        opacity: 0.6;
+    }
+    50% {
+        left: 52%;
+        opacity: 0.5;
+    }
+    60% {
+        left: 55%;
+        opacity: 0.4;
+    }
+    70% {
+        left: 57%;
+        opacity: 0.3;
+    }
+    80% {
+        left: 58%;
+        opacity: 0.2;
+    }
+    90% {
+        left: 59%;
+        opacity: 0.1;
+    }
+    100% {
+        left: 60%;
+        opacity: 0;
+    }
+}
+@keyframes rightTOleftShowControlModeHOME {
+    /* 12% to 2% */
+    0% {
+        left: 60%;
+        opacity: 0;
+    }
+    10% {
+        left: 59%;
+        opacity: 0.1;
+    }
+    20% {
+        right: 58%;
+        opacity: 0.2;
+    }
+    30% {
+        left: 57%;
+        opacity: 0.3;
+    }
+    40% {
+        left: 55%;
+        opacity: 0.4;
+    }
+    50% {
+        left: 52%;
+        opacity: 0.5;
+    }
+    60% {
+        left: 50%;
+        opacity: 0.6;
+    }
+    70% {
+        left: 47%;
+        opacity: 0.7;
+    }
+    80% {
+        left: 45%;
+        opacity: 0.8;
+    }
+    90% {
+        left: 42%;
+        opacity: 0.9;
+    }
+    100% {
+        left: 40%;
+        opacity: 1;
+    }
+}
+@keyframes opacityToZero {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.75;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.25;
+    }
+    100% {
+        opacity: 0;
+    }
+}

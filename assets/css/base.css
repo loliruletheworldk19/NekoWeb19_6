@@ -1,0 +1,51 @@
+:root {
+    --main-color-1: #a63cf7;
+    --main-color-1-hover: #9025e2;
+    --main-color-2: #e5c0ff;
+    --white-color: #fefefe;
+    --white-colorx: #fefefe10;
+    --black-color: #222222;
+    --gray-color: #f0f0f0;
+    --gray-colorx: #c2c2c2;
+    --gray-color-hover: #d1d1d1;
+    --font-color: #323232;
+    --font-color-main: #9130db;
+    --font-color-gray: #888888;
+    --black-to-white: #bbbbbb;
+    --black-to-whitex: #32323210;
+    --purdah: rgba(128, 128, 128, 0.496);
+    --font-size: 16px;
+    --test-color: #ffffff00;
+
+/* SearchBox */
+    --rad: 20px;
+    --dur: .5s;
+    --color-brand: #bd6cfb;
+    --font-fam: 'Lato', sans-serif;
+    --height: 38px;
+    --btn-width: 60px;
+    --bez: cubic-bezier(0, 0, 0.43, 1.49);
+}
+* {
+    box-sizing: border-box;
+    color: var(--font-color);
+    font-size: var( --font-size);
+    font-family: 'Roboto', 'sans-serif', 'Arial', 'Helvetica';
+}
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+#fullScreen {
+    width: 100%;
+    height: 100%; 
+    background-color: var(--black-color);
+    background: url(../img/background/1.jpg) no-repeat center center fixed;
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

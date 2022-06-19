@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Neko-Main-Page</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/normalize801.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/styleMainPage.css">
+    <link rel="stylesheet" href="./assets/css/animation.css">
+    <script src="https://kit.fontawesome.com/02b11b4dc0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="fullScreen">
+        <div class="test" id="tests"></div>
+        <div class="searchContainer">
+            <div class="title">Neko</div>
+            <div class="Searchbox">
+                <form class="boxSearch" role="search">
+                    <label for="search">Search on Neko</label>
+                    <input id="search" type="search" placeholder="Search on Neko..." spellcheck="false"/>
+                    <button type="submit">Go</button>    
+                </form>
+            </div>
+            <span id="cck" style="display: block;">
+                <span class="aae"></span>
+            </span>
+            <span id="cch" style="display: none;">
+                <span class="aae"></span>
+            </span>
+            <div class="boxchangeMode">
+                <div class="changeMode" id="test">
+                    <div class="textMode">
+                        <span id="btnDarkMode" class="mode" style="display: none;">Dark Mode</span>
+                        <span id="btnLightMode" class="mode" style="display: display;">Light Mode</span>
+                    </div>
+                    <label class="switchMode" id="SWM">
+                        <input type="checkbox" id="SetMode" onclick="functionSetMode()">
+                        <span class="slider round" id="sliderRound"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="center">
+            <div class="authentication">
+                <div class="title">
+                    <div class="textTop">Neko</div>
+                    <div class="textbottom">Spice up your creating process</div>
+                </div>
+                <div class="loginRegisterContainer">
+                    <button id="clickToRegister" onclick="location.href='./registerPage.html'">Creat an account</button>
+                    <button id="clickToLogin" onclick="location.href='./loginPage.html'">Login</button>
+                    <div class="title">Begin with an existing account</div>
+                    <div class="anotherSelect">
+                        <button class="select" id="appleLogin">
+                            <i class="fa-brands fa-apple"></i>
+                        </button>
+                        <button class="select" id="twitterLogin">
+                            <i class="fa-brands fa-twitter"></i>
+                        </button>
+                        <button class="select" id="googleLogin">
+                            <i class="fa-brands fa-google"></i>
+                        </button>
+                        <button class="select" id="facebookLogin">
+                            <i class="fa-brands fa-facebook"></i>
+                        </button>
+                    </div>
+                    <div class="line"></div>
+                </div>
+                <div class="info">
+                    This site is protected by reCAPTCHA Enterprise and the Google 
+                    <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy </a>
+                    and 
+                    <a href="https://policies.google.com/terms" target="_blank">Terms of Service </a>
+                    apply.
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/js/index.js"></script>
+</body>
+</html>
